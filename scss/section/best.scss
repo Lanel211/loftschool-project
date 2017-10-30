@@ -1,0 +1,42 @@
+.best {
+  background-image: url('../images/bg/sect_best_bg.jpg');
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &__description {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    text-align: center;
+    padding-bottom: 12.5%;
+
+    &-title {
+      font-size: rem(24px);
+      font-family: 'Lifehack';
+      letter-spacing: -0.5px;
+      line-height: 1.2;
+      margin: 22px 0 16px;
+    }
+
+    &-item {
+      padding: 0 10px;
+      font-size: rem(14px);
+      line-height: 1.7;
+      flex: 1 1 0;
+    }
+
+    &-img {
+      height: 100px;
+    }
+  }
+}
+
+.section__title--best {
+  color: $gray;
+  padding: 0;
+  margin-bottom: rem(60px);
+}
