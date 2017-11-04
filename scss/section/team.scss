@@ -47,7 +47,6 @@
     &__content {
         display: flex;
         justify-content: space-between;
-        padding: rem(15px) rem(5px) 0;
         color: #fff;
         font-size: rem(14px);
         height: 0;
@@ -56,7 +55,8 @@
 }
 
 .team-accord__pic {
-    padding: 0 rem(10px);
+    padding: rem(15px);
+    padding-bottom: 0;
 
     &-img {
         @include circle(6.25rem, transparent);
@@ -64,14 +64,14 @@
 }
 .team-accord__text {
     color: #fff;
-    padding: 0 rem(10px);
+    padding: rem(10px) rem(7px) 0;
 
     &-title {
         font-weight: bold;
     }
     
     &-content {
-        line-height: 1.5;  
+        line-height: 1.75;  
     }
 }
   

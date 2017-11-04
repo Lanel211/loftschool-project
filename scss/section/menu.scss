@@ -1,4 +1,82 @@
 .menu {
     @include background;
     background-image: url('../images/bg/sect_menu_bg.jpg');
+    position: relative;
+}
+
+.menu__container {
+    align-items: flex-start;
+    padding: rem(25px);
+
+    & .section__title {
+        color: #fff;
+    }
+}
+
+.menu__content {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom:0;
+}
+
+.menu-accord {
+    height: 100%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.menu-accord__item {
+    height: inherit;
+    display: flex;
+
+    &:nth-child(1) .menu-accord__trigger {
+        background-image: url(../images/bg/menu_item1_bg.jpg);
+    }
+    &:nth-child(2) .menu-accord__trigger {
+        background-image: url(../images/bg/menu_item2_bg.jpg);
+    }
+    &:nth-child(3) .menu-accord__trigger {
+        background-image: url(../images/bg/menu_item3_bg.jpg);
+    }
+}
+
+.menu-accord__trigger {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    transition: .2s;
+    width: 80px;
+    background: left center no-repeat;
+    background-size: auto 100%;
+
+    &:hover {
+        color: $yellow;
+    }
+}
+
+.menu-accord__trigger-title {
+    white-space: nowrap;
+    transform-origin: 50%;
+    transform: rotate(-90deg);
+}
+
+.menu-accord__content {
+    width: 0;
+    overflow: hidden;
+}
+
+.menu-accord__item_active {
+
+    & .menu-accord__content {
+        width: auto;
+        max-width: rem(540px);
+        background: rgba($gray, .93);
+        color: #fff;
+        height: 100%;
+        padding: rem(42px) rem(35px);
+        font-size: rem(14px);
+        line-height: 1.7;
+    }       
 }
