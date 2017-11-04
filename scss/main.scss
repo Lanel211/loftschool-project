@@ -1,3 +1,6 @@
+// normalize
+@import "../css/normalize";
+
 // config
 @import "config/variables";
 @import "config/mixins";
@@ -7,7 +10,7 @@
 @import "layout/base";
 @import "layout/adjustment";
 
-//section
+// section
 @import "section/primary";
 @import "section/best";
 @import "section/reviews";

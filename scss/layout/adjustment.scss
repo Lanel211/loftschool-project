@@ -19,25 +19,43 @@
 }
 
 .section {
-  height: 100%;
+  height: 100vh;
   background-color: rgba(0,0,0,0.31);
   min-width: 940px;
   min-height: 650px;
 }
 
 .order-link {
-  min-width: rem(98px);
-  padding: 10px 17px;
-  border-radius: 5px;
-  background-color: $orange;
-  color: #fff;
-  text-decoration: none;
-  font-size: 13px;
-  font-weight: 400;
-  line-height: 1.42;
-  text-transform: uppercase;
-  transition: .5s;
-  &:hover {
-    background-color: darken($orange, 7%);
+  @include button($orange);
+}
+
+.nav__bullets {
+  position: fixed;
+  right: 52px;
+  top: 90px;
+  display: flex;
+  flex-direction: column;
+
+  &-item {
+    @include circle(rem(16px), transparent);
+    border: 1px solid transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 5px;
+
+    &.active {
+      border-color:#fff;
+    }
+  }
+
+  &-link {
+    @include circle(rem(6px), #fff);
+    display: block;
+    transition: all linear .2s;
+
+    &:hover {
+      background-color: darken(#fff, 50%);
+    }
   }
 }
