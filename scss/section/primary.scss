@@ -1,8 +1,7 @@
 .hero {
+  @include background;
   background-image: url('../images/bg/sect_primary_bg.jpg');
-  background-repeat: no-repeat;
   background-position: 50%;
-  background-size: cover;
   position: relative;
 }
 

@@ -1,8 +1,7 @@
 .best {
+  @include background;
   background-image: url('../images/bg/sect_best_bg.jpg');
-  background-repeat: no-repeat;
   background-position: center bottom;
-  background-size: cover;
   display: flex;
   justify-content: center;
   align-items: center;
