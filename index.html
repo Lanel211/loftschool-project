@@ -145,7 +145,6 @@
         <section class="section menu">
           <div class="container menu__container">
             <h2 class="section__title">Меню</h2>
-          
             <div class="menu__content">
               <ul class="menu-accord">
                 <li class="menu-accord__item menu-accord__item_active">
@@ -253,7 +252,81 @@
             </li>
           </ul>
         </section>
-        <section class="section order"></section>
+        <section class="section order">
+          <div class="container">
+            <h2 class="section__title">Закажите доставку</h2>
+            <div class="form">
+              <form action="" class="form__elem">
+                <div class="form__content">
+                  <div class="form__content-block">
+                    <div class="form__row">
+                      <label class="form__block">
+                        <div class="form__block-title">Имя</div>
+                        <input type="text" class="form__input">
+                      </label>
+                      <label class="form__block">
+                        <div class="form__block-title">Телефон</div>
+                        <input type="text" class="form__input">
+                      </label>
+                    </div>
+                    <div class="form__row">
+                      <label class="form__block">
+                        <div class="form__block-title">Улица</div>
+                        <input type="text" class="form__input">
+                      </label>
+                    </div>
+                    <div class="form__row">
+                      <label class="form__block">
+                        <div class="form__block-title">Дом</div>
+                        <input type="text" class="form__input">
+                      </label>
+                      <label class="form__block">
+                        <div class="form__block-title">Корпус</div>
+                        <input type="text" class="form__input">
+                      </label>
+                      <label class="form__block">
+                        <div class="form__block-title">Квартира</div>
+                        <input type="text" class="form__input">
+                      </label>
+                      <label class="form__block">
+                        <div class="form__block-title">Этаж</div>
+                        <input type="text" class="form__input">
+                      </label>
+                    </div>
+                  </div>
+                  <div class="form__content-block">
+                    <div class="form__row">
+                      <label class="form__block">
+                        <div class="form__block-title">Комментарий</div>
+                        <textarea class="form__input"></textarea>
+                      </label>
+                    </div>
+                    <div class="form__row">
+                      <label class="form__block form__block_add-info">
+                        <input type="radio" name="payment" value="shortchange" class="form__input_radio visuallyhidden">
+                        <div class="form__block-title form__block-title_pay-info">Потребуется сдача</div>
+                      </label>
+                      <label class="form__block form__block_add-info">
+                        <input type="radio" name="payment" value="cardpay" class="form__input_radio visuallyhidden">
+                        <div class="form__block-title form__block-title_pay-info">Оплата по карте</div>
+                      </label>
+                    </div>
+                    <div class="form__row">
+                      <label class="form__block form__block_add-info">
+                        <input type="checkbox" value="notcall" class="form__input_checkbox visuallyhidden">
+                        <div class="form__block-title form__block-title_call-info">Не перезванивать</div>
+                      </label>
+                    </div>
+                    <div class="form__row">
+                      <input type="submit" value="Заказать" class="form__input order-link">
+                      <input type="reset" value="Очистить" class="form__input form-reset">
+                    </div>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </section>
         <section class="section contacts">
           <footer class="footer"></footer>        
         </section>

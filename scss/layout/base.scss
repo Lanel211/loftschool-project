@@ -23,7 +23,7 @@ ul {
   list-style: none;
 }
 
-.visuallyhidden:not(:focus):not(:active) {
+.visuallyhidden {
   position: absolute;
 
   width: 1px;

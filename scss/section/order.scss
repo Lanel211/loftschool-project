@@ -2,3 +2,107 @@
     @include background;
     background-image: url('../images/bg/sect_order_bg.jpg');
 }
+
+.form {
+    padding-top: rem(50px);
+}
+
+.form__block-title {
+    color: #fff;
+}
+
+.form__content {
+    display: flex;
+    justify-content: center;
+    font-size: rem(14px);
+
+    &-block {
+        padding: rem(10px);
+        flex: 1;
+    }
+}
+
+.form__block textarea {
+    display: block;
+    height: rem(110px);
+    resize: none;
+}
+  
+.form__input {
+    border: none;
+    border-radius: rem(5px);
+    padding: rem(10px);
+    width: 100%;
+
+    &:focus {
+        outline: none;  
+    }    
+}
+  
+.form__row {
+    display: flex;
+    margin-bottom: rem(10px);
+    line-height: 2.1;
+}
+  
+.form__block {
+    flex: 1;
+    margin-right: rem(20px);
+    
+    &:last-child {
+      margin-right: 0;
+    }
+}
+
+.form__block_add-info {
+    display: flex;
+    align-items: center;
+    margin-bottom: rem(3px);
+    flex: initial;
+}
+
+.form__block-title_pay-info {
+    display: flex;
+    align-items: center;
+
+    &:before {
+        content: '';
+        @include circle(rem(14px), #fff);
+        border: rem(3px) solid #fff;
+        margin-right: rem(10px);
+    }
+}
+
+.form__input_radio:checked + .form__block-title_pay-info:before {
+    @include circle(rem(14px), $orange);
+}
+
+.form__block-title_call-info {
+    display: flex;
+    align-items: center;
+
+    &:before {
+        content: '';
+        width: rem(15px);
+        height: rem(15px);
+        background-color: #fff;
+        border: 2px solid #fff;
+        margin-right: rem(10px);
+    }
+}
+
+.form__input_checkbox:checked + .form__block-title_call-info:before {
+    background: url(../images/content/icons/check.svg) no-repeat center #fff;
+    background-size: rem(10px) auto;
+}
+
+.form__input.order-link {
+    min-width: rem(97px);
+    width: auto;
+}
+.form-reset {
+    background: transparent;
+    color: #fff;
+    width: auto;
+    min-width: rem(97px);
+}
