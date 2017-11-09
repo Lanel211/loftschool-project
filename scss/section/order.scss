@@ -1,6 +1,11 @@
 .order {
     @include background;
     background-image: url('../images/bg/sect_order_bg.jpg');
+    padding-top: rem(100px);
+}
+
+.section__order-title {
+    text-align: center;
 }
 
 .form {
@@ -19,6 +24,14 @@
     &-block {
         padding: rem(10px);
         flex: 1;
+
+        @include tablets {
+            padding: 0 18.5%;
+        }
+    }
+
+    @include tablets {
+        flex-direction: column;
     }
 }
 
@@ -43,6 +56,10 @@
     display: flex;
     margin-bottom: rem(10px);
     line-height: 2.1;
+
+    @include tablets {
+        line-height: 2.2;
+    }
 }
   
 .form__block {
@@ -99,10 +116,18 @@
 .form__input.order-link {
     min-width: rem(97px);
     width: auto;
+
+    @include tablets {
+        margin-top: rem(16px);
+    }
 }
 .form-reset {
     background: transparent;
     color: #fff;
     width: auto;
     min-width: rem(97px);
+
+    @include tablets {
+        margin-top: rem(16px);
+    }
 }

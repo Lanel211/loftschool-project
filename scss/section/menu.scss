@@ -47,12 +47,17 @@
     justify-content: center;
     text-decoration: none;
     transition: .2s;
-    width: 80px;
+    width: rem(80px);
     background: left center no-repeat;
     background-size: auto 100%;
 
     &:hover {
         color: $yellow;
+    }
+
+    @include tablets {
+        justify-content: flex-start;
+        align-items: flex-end;
     }
 }
 
@@ -60,6 +65,10 @@
     white-space: nowrap;
     transform-origin: 50%;
     transform: rotate(-90deg);
+
+    @include tablets {
+        transform-origin: rem(13px) 0;
+    }
 }
 
 .menu-accord__content {

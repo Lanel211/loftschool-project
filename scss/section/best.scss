@@ -5,33 +5,47 @@
   display: flex;
   justify-content: center;
   align-items: center;
-
-  &__description {
-    display: flex;
-    justify-content: space-around;
+  
+  @include tablets {
     align-items: flex-start;
-    text-align: center;
-    padding-bottom: 11%;
-
-    &-item {
-      padding: 0 10px;
-      font-size: rem(14px);
-      line-height: 1.7;
-      flex: 1 1 0;
-
-      & h4 {
-        font-size: rem(24px);
-        font-family: 'Lifehack';
-        letter-spacing: -0.5px;
-        line-height: 1.2;
-        margin: 22px 0 16px;
-      }
-    }
-
-    &-img {
-      height: 100px;
-    }
   }
+}
+
+.best__content {
+  @include tablets {
+    padding-top: rem(100px);
+  }
+}
+
+.best__description {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  text-align: center;
+  padding-bottom: 11%;
+
+  @include tablets {
+    padding-top: rem(88px);
+  }
+}
+
+.best__description-item {
+  padding: 0 rem(10px);
+  font-size: rem(14px);
+  line-height: 1.7;
+  flex: 1 1 0;
+
+  & h4 {
+    font-size: rem(24px);
+    font-family: 'Lifehack';
+    letter-spacing: rem(-0.5px);
+    line-height: 1.2;
+    margin: rem(22px) 0 rem(16px);
+  }
+}
+
+.best__description-img {
+  height: rem(100px);
 }
 
 .section__title--best {

@@ -3,54 +3,79 @@
     background-image: url('../images/bg/sect_team_bg.jpg');
     background-position: center top;
     position: relative;
+}
 
-    &__container {
-        position: absolute;
-        top:0;
-        right: 0;
-        bottom: 0;
-        width: 49%;
-        background: rgba(#2f3234, .93);
-        display: flex;
-        flex-direction: column;
-        padding-left: rem(80px);
-        padding-right: 7%;
-        padding-top: rem(5px);
+.team__container {
+    position: absolute;
+    top:0;
+    right: 0;
+    bottom: 0;
+    width: 49%;
+    min-width: rem(450px);
+    background: rgba(#2f3234, .93);
+    display: flex;
+    flex-direction: column;
+    padding-left: rem(80px);
+    padding-right: 7%;
+    padding-top: rem(5px);
+
+    @include tablets {
+        width: 100%;
+        text-align: center;
+        align-items: center;
+        padding-top: rem(100px);
     }
 }
 
 .team-accord {
     padding-top: rem(60px);
+
+    @include tablets {
+        padding: rem(100px) 12%;
+    }
+}
     
-    &__item {
-        margin-bottom: rem(30px);
+.team-accord__item {
+    margin-bottom: rem(30px);
+
+    @include tablets {
+        margin-bottom: rem(25px);
+    }
+}
+
+.team-accord__trigger {
+    color: #fff;
+    display: flex;
+    align-items: center;
+    font-family: 'Gagalin';
+    font-size: rem(14px);
+    text-decoration: none;
+    
+    @include tablets {
+        justify-content: center;
+        font-size: rem(24px);
     }
 
-    &__trigger {
-        color: #fff;
-        display: flex;
-        align-items: center;
-        font-family: 'Gagalin';
-        font-size: rem(14px);
-        text-decoration: none;
-    
-        &:before {
-            content: "";
-            border: 5px solid transparent;
-            border-top: 6px solid $yellow;
-            border-bottom: none;
-            display: inline-flex;
-            margin-right: rem(10px);
-        }
+    &:before {
+        content: "";
+        border: 5px solid transparent;
+        border-top: 6px solid $yellow;
+        border-bottom: none;
+        display: inline-flex;
+        margin-right: rem(10px);
     }
+}
 
-    &__content {
-        display: flex;
-        justify-content: space-between;
-        color: #fff;
-        font-size: rem(14px);
-        height: 0;
-        overflow: hidden;
+.team-accord__content {
+    display: flex;
+    justify-content: space-between;
+    color: #fff;
+    font-size: rem(14px);
+    height: 0;
+    overflow: hidden;
+
+    @include tablets {
+        flex-direction: column;
     }
 }
 
@@ -81,7 +106,7 @@
   
       &:before {
         border-top:none;
-        border-bottom: 6px solid $yellow;
+        border-bottom: rem(6px) solid $yellow;
       }
     }
   
