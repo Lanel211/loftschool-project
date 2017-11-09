@@ -11,6 +11,10 @@
     right: 0;
     bottom: 0;
     padding: rem(10px) 0;
+    
+    @include phones {
+        padding: rem(15px) 0;
+    }
 }
 
 .contacts-block {
@@ -19,12 +23,21 @@
     align-items: center;
     justify-content: space-between;
     padding: 0 rem(10px);
+    
+    @include phones {
+        flex-direction: column;
+    }
 }
 
 .contacts-block__text {
     flex-basis: 50%;
     color: #fff;
     font-size: rem(14px);
+    
+    @include phones {
+        text-align: center;
+        padding-bottom: rem(25px);
+    }
 }
 
 .contact-phone {

@@ -24,6 +24,10 @@
     height: 100%;
     display: flex;
     justify-content: flex-end;
+
+    @include phones {
+        flex-wrap: wrap;
+    }
 }
 
 .menu-accord__item {
@@ -69,6 +73,9 @@
     @include tablets {
         transform-origin: rem(13px) 0;
     }
+    @include phones {
+        padding-left: rem(20px);
+    }
 }
 
 .menu-accord__content {
@@ -87,5 +94,28 @@
         padding: rem(42px) rem(35px);
         font-size: rem(14px);
         line-height: 1.7;
-    }       
+        position: relative;
+    }
+    & .menu-accord__trigger-title {
+        color: $yellow;
+    } 
+    
+    @include phones {
+        flex-basis: 100%;
+    }
+}
+
+.close-btn {
+    position: absolute;
+    top:rem(30px);
+    right: rem(30px);
+    width: rem(20px);
+    height: rem(20px);
+    display: block;
+    background: url('../../images/content/close_btn.png') no-repeat center/cover;
+    transition: .2s;
+
+    &:hover {
+        opacity: 0.5;
+    }
 }

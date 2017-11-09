@@ -2,14 +2,27 @@
     @include background;
     background-image: url('../images/bg/sect_order_bg.jpg');
     padding-top: rem(100px);
+
+    @include phones {
+        padding: rem(25px) 2%;
+    }
 }
 
 .section__order-title {
     text-align: center;
+
+    @include phones {
+        padding-top: rem(30px);
+        line-height: 1.2;
+    }
 }
 
 .form {
     padding-top: rem(50px);
+    
+    @include phones {
+        padding-top: rem(15px);
+    }
 }
 
 .form__block-title {
@@ -27,6 +40,9 @@
 
         @include tablets {
             padding: 0 18.5%;
+        }
+        @include phones {
+            padding: 0;
         }
     }
 
@@ -59,6 +75,14 @@
 
     @include tablets {
         line-height: 2.2;
+    }
+}
+
+.row__add-info {
+    @include phones {
+        justify-content: center;
+        padding-top: rem(25px);
+        line-height: 1.42;
     }
 }
   
@@ -120,6 +144,9 @@
     @include tablets {
         margin-top: rem(16px);
     }
+    @include phones {
+        margin-top: 0;
+    }
 }
 .form-reset {
     background: transparent;
@@ -129,5 +156,8 @@
 
     @include tablets {
         margin-top: rem(16px);
+    }
+    @include phones {
+        margin-top: 0;
     }
 }

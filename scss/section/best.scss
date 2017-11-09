@@ -15,6 +15,9 @@
   @include tablets {
     padding-top: rem(100px);
   }
+  @include tablets {
+    padding-top: rem(40px);
+  }
 }
 
 .best__description {
@@ -26,6 +29,11 @@
 
   @include tablets {
     padding-top: rem(88px);
+  }
+  @include phones {
+    flex-direction: column;
+    padding-top: 0;
+    text-align: left;
   }
 }
 
@@ -41,12 +49,31 @@
     letter-spacing: rem(-0.5px);
     line-height: 1.2;
     margin: rem(22px) 0 rem(16px);
+    font-weight: normal;
+  }
+
+  @include phones {
+    display: flex;
+    flex: initial;
+    padding: rem(5px) rem(10px) rem(30px);
+  
+    & h4 {
+      margin-top: 0;
+    }
   }
 }
 
 .best__description-img {
   height: rem(100px);
+  flex-basis: 30%;
+  text-align: center;
 }
+
+.best__description-text {
+  @include phones {
+    flex-basis: 70%;
+  }
+}  
 
 .section__title--best {
   color: $gray;

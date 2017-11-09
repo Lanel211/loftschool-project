@@ -17,6 +17,14 @@
     margin-right: auto;
     margin-top: rem(7px);
     align-self: flex-start;
+
+    @include phones {
+      margin-top: 0;
+    }
+  }
+  
+  @include phones {
+    padding: rem(15px) 5% 0;
   }
 }
 
@@ -81,24 +89,17 @@
 .hero__content {
   width: 100%;
   display: flex;
-  flex-wrap: wrap;
   flex-grow: 1;
   align-items: center;
   padding: 0 rem(25px) 11%;
 
   @include tablets {
     padding-bottom: rem(150px);
+    flex-direction: column;
   }
-}
-
-.hero__img, .hero__description {
-  display: flex;
-  flex-basis: 50%;
-  
-  @include laptops {
-    flex-basis: 100%;
-    justify-content: center;
-    text-align: center;
+  @include phones {
+    padding-left: 11%;
+    padding-right: 11%;
   }
 }
 
@@ -106,6 +107,9 @@
 
   @include tablets {
     padding-top: rem(50px);
+  }
+  @include phones {
+    padding-top: rem(30px);
   }
 }
 
@@ -118,25 +122,40 @@
   justify-content: center;
   padding-left: rem(10px);
   
-  &-text {
-    color: #fff;
-    font-family: 'Lifehack';
-    font-size: rem(65px);
-    font-weight: 400;
-    line-height: 0.93;
-    padding-top: rem(10px);
-    letter-spacing: rem(-1.6px);
-
-    @include laptops {
-      padding-left: 15%;
-      padding-right: 15%;
-    }
-
-    @include tablets {
-      padding-left: 4%;
-      padding-right: 4%; 
+  @include phones {
+    & .section__title {
+      font-size: rem(63px);
     }
   }
+}
+
+.hero__img, .hero__description {
+  flex-basis: 50%;
+  
+  @include tablets {
+    flex-basis: 100%;
+    justify-content: center;
+    text-align: center;
+  }
+}
+
+.hero__description-text {
+  color: #fff;
+  font-family: 'Lifehack';
+  font-size: rem(65px);
+  font-weight: 400;
+  line-height: 0.93;
+  padding-top: rem(10px);
+  letter-spacing: rem(-1.6px);
+
+  @include tablets {
+    padding-left: 4%;
+    padding-right: 4%; 
+  }
+  @include phones {
+    font-size: rem(42px); 
+  }
+
 }
 
 .arrow-down {
