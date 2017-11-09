@@ -83,6 +83,22 @@
     overflow: hidden;
 }
 
+.close-btn {
+    position: absolute;
+    top:rem(30px);
+    right: rem(30px);
+    width: rem(20px);
+    height: rem(20px);
+    display: block;
+    background: url('../../images/content/close_btn.png') no-repeat center/cover;
+    transition: .2s;
+    display: none;
+
+    &:hover {
+        opacity: 0.5;
+    }
+}
+
 .menu-accord__item_active {
 
     & .menu-accord__content {
@@ -102,20 +118,9 @@
     
     @include phones {
         flex-basis: 100%;
-    }
-}
 
-.close-btn {
-    position: absolute;
-    top:rem(30px);
-    right: rem(30px);
-    width: rem(20px);
-    height: rem(20px);
-    display: block;
-    background: url('../../images/content/close_btn.png') no-repeat center/cover;
-    transition: .2s;
-
-    &:hover {
-        opacity: 0.5;
+        & .close-btn {
+            display: block;
+        }
     }
 }
