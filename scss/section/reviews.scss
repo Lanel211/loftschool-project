@@ -12,8 +12,14 @@
     position: relative;
     line-height: 0;
     height: 50%;
-    background: center top no-repeat/cover;
+    background: center no-repeat;
+    background-size: cover;
     filter: grayscale(100%);
+
+    @include tablets {
+        flex-basis: 50%;
+        height: 25%;
+    }
 
     &-img {
         width: 100%;
@@ -32,6 +38,17 @@
         padding: 16% 7%;
         font-size: rem(14px);
         line-height: 1.7;
+
+        @include tablets {
+            text-align: center;
+            padding: 8% 10%;
+        }
+
+        @include phones {
+            .reviews__item-text {
+                display: none;
+            }
+        }
     }
 
     &:hover .reviews__item-content {
@@ -40,11 +57,25 @@
 
     &-author {
         font-family: 'Gagalin';
-        margin-bottom: 20px;
+        margin-bottom: rem(20px);
+
+        @include tablets {
+            margin-bottom: rem(8px);
+        }
+
+        @include phones {
+            font-size: rem(24px);
+            line-height: 1.2;
+            padding: rem(20px) 0 rem(23px);
+        }
     }
 
     &-text {
-        margin-bottom: 20px;
+        margin-bottom: rem(20px);
+
+        @include tablets {
+            margin-bottom: rem(30px);
+        }
     }
 }
 

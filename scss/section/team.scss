@@ -1,0 +1,126 @@
+.team {
+    @include background;
+    background-image: url('../images/bg/sect_team_bg.jpg');
+    background-position: center top;
+    position: relative;
+}
+
+.team__container {
+    position: absolute;
+    top:0;
+    right: 0;
+    bottom: 0;
+    width: 49%;
+    min-width: rem(450px);
+    height: 100%;
+    background: rgba(#2f3234, .93);
+    display: flex;
+    flex-direction: column;
+    padding-left: rem(80px);
+    padding-right: 7%;
+    padding-top: rem(5px);
+
+    @include tablets {
+        width: 100%;
+        text-align: center;
+        align-items: center;
+        padding: rem(100px)0 0;
+    }
+    @include phones {
+        padding-top: rem(25px);
+        position: initial;
+        min-width: 0;
+    }
+}
+
+.team-accord {
+    padding-top: rem(60px);
+
+    @include tablets {
+        padding: rem(100px) 12%;
+    }
+    @include phones {
+        padding-top: rem(75px);
+    }
+}
+    
+.team-accord__item {
+    margin-bottom: rem(30px);
+
+    @include tablets {
+        margin-bottom: rem(25px);
+    }
+}
+
+.team-accord__trigger {
+    color: #fff;
+    display: flex;
+    align-items: center;
+    font-family: 'Gagalin';
+    font-size: rem(14px);
+    text-decoration: none;
+    
+    @include tablets {
+        justify-content: center;
+        font-size: rem(24px);
+    }
+
+    &:before {
+        content: "";
+        border: 5px solid transparent;
+        border-top: 6px solid $yellow;
+        border-bottom: none;
+        display: inline-flex;
+        margin-right: rem(10px);
+    }
+}
+
+.team-accord__content {
+    display: flex;
+    justify-content: space-between;
+    color: #fff;
+    font-size: rem(14px);
+    height: 0;
+    overflow: hidden;
+
+    @include tablets {
+        flex-direction: column;
+    }
+}
+
+.team-accord__pic {
+    padding: rem(15px);
+    padding-bottom: 0;
+
+    &-img {
+        @include circle(6.25rem, transparent);
+    }
+}
+.team-accord__text {
+    color: #fff;
+    padding: rem(10px) rem(7px) 0;
+
+    &-title {
+        font-weight: bold;
+    }
+    
+    &-content {
+        line-height: 1.75;  
+    }
+}
+  
+.team-accord__item_active {
+    .team-accord__trigger {
+      color: $yellow;
+  
+      &:before {
+        border-top:none;
+        border-bottom: rem(6px) solid $yellow;
+      }
+    }
+  
+    .team-accord__content {
+        height: auto;
+        overflow: initial;
+    }
+}

@@ -6,11 +6,11 @@
 
 .maincontent {
   height: 100%;
-  min-height: 650px;
+  min-height: rem(650px);
 }
 
 .container {
-  width: 960px;
+  max-width: 960px;
   margin: 0 auto;
   display: flex;
   justify-content: center;
@@ -21,8 +21,41 @@
 .section {
   height: 100vh;
   background-color: rgba(0,0,0,0.31);
-  min-width: 940px;
-  min-height: 650px;
+  width:100%;
+  min-height: rem(650px);
+
+  @include tablets {
+    min-height: rem(1024px);
+  }
+  @include phones {
+    min-height: rem(800px);
+  }
+}
+
+.section__title {
+  color: $yellow;
+  font-family: 'Gagalin';
+  font-size: rem(72px);
+  font-weight: 400;
+  line-height: 1.42;
+  margin: 0;
+  padding-top: rem(60px);
+
+  @include tablets {
+    padding-top: 0;
+  }
+  @include phones {
+    font-size: rem(50px);
+    padding-top: rem(25px);
+  }
+}
+
+.block__title {
+  color: #fff;
+  font-family: 'Gagalin';
+  font-weight: 400;
+  line-height: 1.42;
+  font-size: rem(40px);
 }
 
 .order-link {
@@ -31,18 +64,18 @@
 
 .nav__bullets {
   position: fixed;
-  right: 52px;
-  top: 90px;
+  right: rem(52px);
+  top: rem(90px);
   display: flex;
   flex-direction: column;
 
   &-item {
     @include circle(rem(16px), transparent);
-    border: 1px solid transparent;
+    border: rem(1px) solid transparent;
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-bottom: 5px;
+    margin-bottom: rem(5px);
 
     &.active {
       border-color:#fff;
@@ -57,5 +90,9 @@
     &:hover {
       background-color: darken(#fff, 50%);
     }
+  }
+
+  @include tablets {
+    display: none;
   }
 }
