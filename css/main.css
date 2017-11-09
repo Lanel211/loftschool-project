@@ -826,7 +826,7 @@ ul {
   .best__content {
     padding-top: 6.25rem; } }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 497px) {
   .best__content {
     padding-top: 2.5rem; } }
 
@@ -1294,8 +1294,10 @@ ul {
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  background-image: url("../images/bg/sect_order_bg.jpg");
-  padding-top: 6.25rem; }
+  background-image: url("../images/bg/sect_order_bg.jpg"); }
+  @media screen and (max-width: 768px) {
+    .order {
+      padding-top: 6.25rem; } }
   @media screen and (max-width: 497px) {
     .order {
       padding: 1.5625rem 2%; } }
