@@ -1,7 +1,10 @@
 .order {
     @include background;
     background-image: url('../images/bg/sect_order_bg.jpg');
-    padding-top: rem(100px);
+
+    @include tablets {
+        padding-top: rem(100px);
+    }
 
     @include phones {
         padding: rem(25px) 2%;
