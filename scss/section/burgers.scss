@@ -1,4 +1,274 @@
 .burgers {
     background: $yellow;
     background: linear-gradient(to bottom, #f9b43b 0%, #eb8c38 48%, #f9b43b 74%);
-}  
+    display: flex;
+    justify-content: center;
+}
+
+.burgers__content {
+    margin: 0;
+    order: 5;
+
+    @include tablets {
+        max-width: rem(640px);
+    }
+}
+
+.nav__prev {
+    display: flex;
+    align-items: center;
+}
+
+.nav__next {
+    @extend .nav__prev ;
+    order: 10;
+}
+
+.arrow-left {
+    background: url(../../images/content/icons/arrow-scroll.svg) no-repeat center;
+    background-size: contain;
+    width: rem(30px);
+    height: rem(16px);
+    transform: rotate(90deg);
+    transition: .2s;
+    &:hover {
+        opacity: .5;
+    }
+
+    @include phones {
+        width: rem(25px);
+    }
+}
+
+.arrow-right {
+    @extend .arrow-left ;
+    transform: rotate(-90deg);
+}
+
+.burger__list {
+    height: 100%;
+    display: flex;
+    padding: rem(85px) 0;
+
+    @include tablets {
+        padding: rem(130px) 4% rem(85px);
+    }
+
+    @include phones {
+        padding: rem(46px) 0 0;
+    }
+}
+
+.burger__item {
+    display: flex;
+    color:#fff;
+    flex: 1;
+
+    @include tablets {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+.burger__desc {
+    padding: 0 rem(10px);
+    flex-basis: 50%; 
+
+    @include tablets {
+        text-align: center;
+        padding: rem(32px) rem(10px) 0;
+    }
+    @include phones {
+        padding-top: rem(16px);
+        padding-bottom: rem(48px);
+    }
+}
+
+.burger__pic {
+    flex-basis: 50%; 
+    padding: rem(78px) rem(10px);
+    position: relative;
+
+    @include tablets {
+        padding-bottom: 0;
+    }
+
+    @include phones {
+        padding: 7.1875rem 7% 0;
+    }
+}
+
+.burger-img {
+    max-width: 100%;
+}
+
+// components
+.burger__components {
+    position: absolute;
+    top:rem(5px);
+    left: rem(10px);
+    display: flex;
+    width: 100%;
+    z-index: 3;
+
+    @include tablets {
+        left:0;
+    }
+}
+.components__button {
+    display: block;
+    background: url(../images/content/icons/burger.svg) center rem(15px) no-repeat #f08c33;
+    font-family: 'Gagalin';
+    font-size: rem(14px);
+    color:#fff;
+    width: rem(90px);
+    height: rem(90px);
+    text-align: center;
+    border-radius: rem(6px);
+    text-decoration: none;
+    padding-top: rem(63px);
+    transition: .5s;
+
+    &:hover, &-active {
+        background-color: $orange;
+    }
+}
+
+.components__block {
+    display: none;
+    position: relative;
+    border-radius: rem(6px);
+    background: #fff;
+    padding: rem(17px) rem(20px);
+    color: $gray;
+    @include tablets {
+        padding-right: 70px;
+    }
+    @include phones {
+        padding-right: 19%;
+        padding-left: 4%;
+    }
+}
+
+.component-item {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: rem(8px);
+}
+
+.component-pic {
+    width: rem(50px);
+    text-align: center;
+    margin-right: rem(20px);
+}
+
+.component-desc {
+    display: flex;
+    flex-wrap: wrap;
+}
+.component-name {
+    margin-right: auto;
+    padding-right:rem(52px); 
+
+    @include phones {
+        padding-right: 18%;
+    }
+}
+
+.components__list-close {
+    display: none;
+    position: absolute;
+    top: rem(20px);
+    right: rem(20px);
+    width: rem(20px);
+    height: rem(20px);
+    background: url(../images/content/close_btn_red.png) no-repeat center/cover;
+    transition: .2s;
+
+    &:hover {
+        opacity: .8;
+    }
+
+    @include tablets {
+        display: block;
+    }
+}
+
+.burger__kkal {
+    position: absolute;
+    width: rem(60px);
+    height: rem(80px);
+    bottom: 0;
+    left: rem(10px);
+    background: url(../images/content/icons/kkal.svg) center top no-repeat;
+    background-size: contain;
+    text-align: center;
+    font-family: 'Gagalin';
+    opacity: .5;
+    z-index: 2;
+
+    @include tablets {
+        right:0;
+        left: initial;
+        top: rem(5px);
+    }
+}
+
+.kkal-number {
+    font-size: rem(20px);
+    margin: rem(25px) 0 rem(5px);
+}
+.kkal-text {
+    font-size: rem(14px);
+    margin: 0;
+}
+
+.burger__name {
+    @extend .section__title ;
+    color: #fff;
+    padding-top: 0;
+    line-height: rem(64px);
+    padding-bottom: rem(40px);
+
+    @include tablets {
+        padding: 0 7% rem(20px);
+    }
+    @include phones {
+        padding-bottom: rem(5px);
+    }
+}
+
+.burger__text {
+    font-size: rem(14px);
+    line-height: rem(23px);
+}
+
+.burger__price {
+    display: flex;
+    align-items: flex-end;
+
+    @include tablets {
+        justify-content: center;
+    }
+}
+
+.burger__price-cost {
+    @extend .section__title ;
+    text-transform: none;
+    color: $orange;
+    line-height: 1;
+    padding-top: rem(23px);
+    padding-right: rem(26px);
+
+    @include tablets {
+        padding-top: rem(32px);
+    }
+    @include phones {
+        padding-top: rem(18px);
+    }
+    &-currency {
+        font-size: rem(30px);
+    }
+}
