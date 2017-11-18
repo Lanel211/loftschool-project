@@ -1,11 +1,11 @@
 // mobile menu
-var menuButton = document.querySelector('.hamburger-menu-link')
-var menuMobile = document.querySelector('.hamburger-menu')
-var menuClose = document.querySelector('.hamburger-menu__close-btn')
+let menuButton = document.querySelector('.hamburger-menu-link')
+let menuMobile = document.querySelector('.hamburger-menu')
+let menuClose = document.querySelector('.hamburger-menu__close-btn')
 
-menuButton.addEventListener('click', function() {
+menuButton.addEventListener('click', () => {
     menuMobile.classList.add('hamburger-menu_visible')   
 })
-menuClose.addEventListener('click', function() {
+menuClose.addEventListener('click', () => {
     menuMobile.classList.remove('hamburger-menu_visible')   
 })
