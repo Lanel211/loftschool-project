@@ -1,0 +1,52 @@
+.hamburger-menu {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background: rgba(#2f3234, .99);
+    align-items: center;
+    flex-direction: column;
+	justify-content: center;
+	z-index: 100;
+	display: none;
+	transition: opacity .3s;
+
+	&_visible {
+		display: flex;
+		opacity: 0;
+	}
+}
+
+.hamburger-menu__list {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    color:#fff;
+    text-align: center;
+    font-size: rem(24px);
+    text-transform: uppercase;
+    padding-top: rem(170px);
+
+    @include phones {
+        padding-top: rem(90px);
+    }
+}
+
+.hamburger-menu__item {
+    line-height: rem(74px);
+    &:before {
+        @include circle(rem(6px), #fff);
+        content: '';
+        display: block;
+        margin: auto;
+    }
+    &:first-child::before {
+        content: initial;
+    }
+}
+
+.hamburger-menu__close-btn {
+    @extend .close-btn ;
+    display: block;
+}
