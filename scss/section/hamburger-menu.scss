@@ -46,10 +46,14 @@
     flex-direction: column;
 	justify-content: center;
 	z-index: 100;
-	display: none;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity .2s;
 
 	&_visible {
         display: flex;
+        visibility: visible;
+        opacity: 1;
 	}
 }
 
@@ -78,6 +82,15 @@
     }
     &:first-child::before {
         content: initial;
+    }
+}
+.hamburger-menu_link {
+    color: #fff;
+    text-decoration: none;
+    transition: .2s;
+
+    &:hover {
+        text-decoration: underline;
     }
 }
 

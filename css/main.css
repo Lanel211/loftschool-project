@@ -1889,12 +1889,18 @@ ul {
   -ms-flex-pack: center;
   justify-content: center;
   z-index: 100;
-  display: none; }
+  visibility: hidden;
+  opacity: 0;
+  -webkit-transition: opacity .2s;
+  -o-transition: opacity .2s;
+  transition: opacity .2s; }
   .hamburger-menu_visible {
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
-    display: flex; }
+    display: flex;
+    visibility: visible;
+    opacity: 1; }
 
 .hamburger-menu__list {
   height: 100vh;
@@ -1928,6 +1934,15 @@ ul {
     margin: auto; }
   .hamburger-menu__item:first-child::before {
     content: initial; }
+
+.hamburger-menu_link {
+  color: #fff;
+  text-decoration: none;
+  -webkit-transition: .2s;
+  -o-transition: .2s;
+  transition: .2s; }
+  .hamburger-menu_link:hover {
+    text-decoration: underline; }
 
 .hamburger-menu__close-btn {
   top: 2.5rem;
