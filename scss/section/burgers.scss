@@ -132,15 +132,31 @@
     &:hover, &-active {
         background-color: $orange;
     }
+    &:hover + .components__block {
+        visibility: visible;
+        opacity: 1;
+    }
+    /*@include tablets {
+        &:hover + .components__block {
+            visibility: hidden;
+        }    
+    }
+    @include phones {
+        &:hover + .components__block {
+            visibility: hidden;
+        }    
+    }*/
 }
 
 .components__block {
-    display: none;
+    visibility: hidden;
     position: relative;
     border-radius: rem(6px);
     background: #fff;
     padding: rem(17px) rem(20px);
     color: $gray;
+    transition: opacity .5s;
+    opacity: 0;
     @include tablets {
         padding-right: 70px;
     }
@@ -158,10 +174,18 @@
     margin-bottom: rem(8px);
 }
 
+.component-desc {
+    width: 100%;
+}
+
 .component-pic {
     width: rem(50px);
     text-align: center;
     margin-right: rem(20px);
+}
+
+.component-img {
+    max-width: 100%;
 }
 
 .component-desc {
